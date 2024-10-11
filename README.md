@@ -1,7 +1,6 @@
 # ETL_SPDadosCriminais
 
 ### Argumentos
----
 
 #### extract.py
 

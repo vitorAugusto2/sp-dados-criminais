@@ -9,6 +9,7 @@ def extract_data():
         "./data/raw/SPDadosCriminais_2022.xlsx",
         "./data/raw/SPDadosCriminais_2023.xlsx"
     ]
+
     pasta_destino = "./data/filtered"
     cidade = "S.PAULO"
     anos = [2021, 2022, 2023]

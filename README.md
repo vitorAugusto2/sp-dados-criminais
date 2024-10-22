@@ -95,4 +95,4 @@ Algumas melhorias futuras que podem ser implementadas incluem:
 * Aplicação de modelos de previsão: Utilização de técnicas de Machine Learning para prever tendências criminais futuras, identificando padrões temporais e espaciais que podem auxiliar nas políticas públicas de segurança.
 
 # Referência
-[TCC2___Previsão_de_Roubos_e_Furtos (2).pdf](https://github.com/user-attachments/files/17480568/TCC2___Previsao_de_Roubos_e_Furtos.2.pdf)
+[Previsão_de_Roubos_e_Furtos](https://github.com/user-attachments/files/17480568/TCC2___Previsao_de_Roubos_e_Furtos.2.pdf)

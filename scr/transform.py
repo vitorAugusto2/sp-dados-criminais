@@ -8,7 +8,7 @@ def read_and_filter_excel(file_path: str, city: str, years: List[int]) -> pd.Dat
     filtered_data = []
     
     for sheet in xls.sheet_names:
-        df = pd.read_excel(xls, sheet_name=sheet, nrows=1000)
+        df = pd.read_excel(xls, sheet_name=sheet)
         df_filtered = df[(df["CIDADE"] == city) & (df["ANO_BO"].isin(years))]
         filtered_data.append(df_filtered)
     

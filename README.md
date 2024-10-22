@@ -1,7 +1,7 @@
 # ETL para Dados Criminais de São Paulo (2021-2023)
 
 ## Introdução
-Este relatório documenta a implementação de um pipeline ETL (Extração, Transformação e Carga) aplicado aos dados criminais da cidade de São Paulo, cobrindo os anos de 2021 a 2023. O projeto foi desenvolvido para organizar e processar os dados criminais, visando sua inserção em um banco de dados relacional (PostgreSQL), permitindo consultas e análises futuras.
+Este relatório documenta a implementação de um pipeline ETL (Extração, Transformação e Carregar) aplicado aos dados criminais da cidade de São Paulo, cobrindo os anos de 2021 a 2023. O projeto foi desenvolvido para organizar e processar os dados criminais, visando sua inserção em um banco de dados relacional (PostgreSQL), permitindo consultas e análises futuras.
 
 ## Objetivo
 O objetivo deste projeto foi criar um processo automatizado que:

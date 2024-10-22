@@ -62,6 +62,7 @@ def transform_data(path_data_raw: str, city: str, years: List[int]) -> None:
     df_concat.sort_values(by="ANO_BO", ascending=False, inplace=True)
     
     path_output = "./data/transformed/"
+    os.makedirs(path_output, exist_ok=True)
     output_file = os.path.join(path_output, "SPDadosCriminais_2021_2022_2023_clean.csv")
     df_concat.to_csv(output_file, index=False)
 

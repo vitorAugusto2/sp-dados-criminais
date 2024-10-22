@@ -60,5 +60,3 @@ python main.py
 ``` 
 
 Os logs de execução serão exibidos no terminal, indicando o progresso de cada etapa (extração, transformação e carga).
-
-## Resultado

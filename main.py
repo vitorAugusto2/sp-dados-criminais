@@ -8,9 +8,9 @@ def extract():
         "https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2022.xlsx",
         "https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2023.xlsx"
     ]
-
     path_output = "./data/raw/"
-
+    os.makedirs(path_output, exist_ok=True)
+    
     print("Starting data extraction...")
     for url in urls:
         file_name = os.path.basename(url)
@@ -21,6 +21,7 @@ def extract():
 
 def transform():
     path_data_raw = "./data/raw"
+    
     city = "S.PAULO"
     years = [2021, 2022, 2023]  
 

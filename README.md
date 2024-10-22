@@ -13,12 +13,10 @@ O objetivo deste projeto foi criar um processo automatizado que:
 ## Descrição do Projeto
 O pipeline ETL foi implementado em três etapas distintas: extração, transformação e carga. Abaixo estão descritas as especificações de cada etapa.
 
-**Extração**
-
+### **Extração**
 A etapa de extração consistiu em carregar os dados brutos a partir de arquivos Excel contendo informações de criminalidade. Estes arquivos foram obtidos através de scraping de sites públicos da Secretaria de Segurança Pública de São Paulo.
 
-**Transformação**
-
+### **Transformação**
 Na etapa de transformação, foi realizado o tratamento dos dados extraídos. As operações de transformação incluíram: 
 
 * Conversão de tipos de dados: Correção de formatação e tipagem incorreta de colunas, como datas e valores numéricos.
@@ -27,7 +25,7 @@ Na etapa de transformação, foi realizado o tratamento dos dados extraídos. As
 * Filtragem de dados relevantes: Seleção de colunas e registros que seriam carregados no banco de dados.
 * Normalização: Ajustes na padronização de nomes de colunas e categorias, garantindo consistência.
 
-**Carregar**
+### **Carregar**
 Por fim, na etapa de carga, os dados transformados foram carregados em um banco de dados PostgreSQL. Para isso, foram criadas tabelas normalizadas que armazenam as informações de forma organizada, possibilitando consultas rápidas e precisas.
   
 ## Estrutura do Projeto

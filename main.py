@@ -1,44 +1,49 @@
-from scr.extract import processar_arquivos  
+import os
+from scr.extract import download_data  
+from scr.transform import transform_data
+from scr.load import load_db
 
-def extract_data():
-    """
-    Realiza a extração dos dados a partir de arquivos Excel.
-    """
-    
-    arquivos_excel = [
-        "./data/raw/SPDadosCriminais_2022.xlsx",
-        "./data/raw/SPDadosCriminais_2023.xlsx"
+def extract():
+    urls = [
+        "https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2022.xlsx",
+        "https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2023.xlsx"
     ]
 
-    pasta_destino = "./data/filtered"
-    cidade = "S.PAULO"
-    anos = [2021, 2022, 2023]
+    path_output = "./data/raw/"
 
-    processar_arquivos(arquivos_excel, pasta_destino, cidade, anos)
+    print("Starting data extraction...")
+    for url in urls:
+        file_name = os.path.basename(url)
+        output_file = os.path.join(path_output, file_name)
+        download_data(url, output_file)
+    print("Extraction completed successfully")
 
-def transform_data():
-    """
-    Placeholder para a etapa de transformação dos dados.
-    """
+
+def transform():
+    path_data_raw = "./data/raw"
+    city = "S.PAULO"
+    years = [2021, 2022, 2023]  
+
+    print("Starting data transformation...")
+    transform_data(path_data_raw, city, years)
+    print("Data transformation completed successfully")
+
+
+def load():
+    path_data_transformed = "./data/transformed/SPDadosCriminais_2021_2022_2023_clean.csv"
     
-    print("Transformação dos dados ainda não implementada.")
-
-def load_data():
-    """
-    Placeholder para a etapa de carga dos dados em um banco ou sistema de destino.
-    """
-    
-    print("Carga dos dados ainda não implementada.")
+    print("Starting data loading...")
+    load_db(path_data_transformed)
+    print("Data loading completed successfully")
 
 
 def main():
-    """
-    Função principal que executa as etapas de extração, transformação e carga (ETL).
-    """
-    
-    extract_data()
-    transform_data()
-    load_data()
+    print("ETL pipeline started...")
+    extract()
+    transform()
+    load()
+    print("ETL pipeline completed successfully")
+
 
 if __name__ == "__main__":
     main()

@@ -84,7 +84,7 @@ Os logs de execução serão exibidos no terminal, indicando o progresso de cada
 ## Resultados
 Após a implementação do pipeline ETL, foi possível gerar uma base de dados consistente e padronizada com os dados criminais de São Paulo de 2021 a 2023. Este repositório de dados agora pode ser utilizado para análises exploratórias, criação de relatórios e dashboards interativos, além de servir como fonte para estudos mais avançados.
 
->> colocar gif de execucao <<
+-> colocar gif de execucao <-
 
 ## Trabalhos Futuros
 Algumas melhorias futuras que podem ser implementadas incluem:
